@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MM-Data — Data & Vizualizace</title>
+  <meta name="description" content="Data analytik • Power BI • Přehledné dashboardy a automatizované reporty" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='10' fill='%232c3e50'/><rect x='20' y='55' width='12' height='25' rx='3' fill='%23ffffff'/><rect x='36' y='20' width='12' height='60' rx='3' fill='%23d4af37'/><rect x='52' y='55' width='12' height='25' rx='3' fill='%23ffffff'/><rect x='68' y='35' width='12' height='45' rx='3' fill='%23ffffff'/></svg>">
+</head>
+<body>
+  <header>
+    <div class="container bar">
+      <a class="logo" href="#home" aria-label="Domů">
+        <svg width="210" height="40" viewBox="0 0 210 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <title>Logo MM-Data</title>
+            <rect x="4" y="21" width="8" height="14" rx="1" fill="#2c3e50"/><rect x="14" y="7" width="8" height="28" rx="1" fill="#d4af37"/><rect x="24" y="21" width="8" height="14" rx="1" fill="#2c3e50"/><rect x="34" y="14" width="8" height="21" rx="1" fill="#2c3e50"/>
+            <text x="50" y="32" font-family="Montserrat, sans-serif" font-size="28" font-weight="600" fill="#2c3e50">MM-DATA</text>
+        </svg>
+      </a>
+
+      <nav class="desktop" aria-label="Hlavní">
+  <a href="#about" data-key="nav_about">O&nbsp;mě</a>
+  <a href="#services" data-key="nav_services">Služby</a>
+  <a href="#portfolio" data-key="nav_portfolio">Ukázky řešení</a>
+  <a href="#pricing" data-key="nav_pricing">Spolupráce</a>
+  <a href="#contact" class="cta" data-key="nav_cta">Napište mi</a>
+  <div class="lang-switcher">
+    <a href="#" class="lang-link" data-lang="cs">CZ</a>
+    <span>|</span>
+    <a href="#" class="lang-link" data-lang="en">EN</a>
+  </div>
+</nav>
+
+      <button id="hamburger-menu" class="hamb" aria-controls="mobile-nav" aria-expanded="false" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 6h18M3 12h18M3 18h18"/>
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobile-nav" class="panel" hidden>
+  <div class="inner container">
+    <a href="#about" data-key="nav_about">O&nbsp;mě</a>
+    <a href="#services" data-key="nav_services">Služby</a>
+    <a href="#portfolio" data-key="nav_portfolio">Ukázky řešení</a>
+    <a href="#pricing" data-key="nav_pricing">Spolupráce</a>
+    <a href="#contact" class="cta" data-key="nav_cta">Napište mi</a>
+    <div class="lang-switcher-mobile">
+      <a href="#" class="lang-link" data-lang="cs">CZ</a>
+      <span>|</span>
+      <a href="#" class="lang-link" data-lang="en">EN</a>
+    </div>
+  </div>
+</div>
+  </header>
+
+  <main id="home">
+    <section class="hero container">
+      <div class="hero-text">
+        <h1 data-key="hero_title">Data, co vydělávají. Přehledné dashboardy v&nbsp;Power&nbsp;BI.</h1>
+        <p data-key="hero_p1">Jmenuji se Michal Malich a dělám přehledné reporty, které ušetří čas a pomohou Vám dělat rozhodnutí bez mlžení.</p>
+        <p data-key="hero_p2">Čistím data v Power Query a stavím modely v DAXu.</p>
+        <div class="stack">
+          <span class="pill" data-key="pill1">Power BI</span>
+          <span class="pill" data-key="pill2">Power Query (M)</span>
+          <span class="pill" data-key="pill3">DAX</span>
+          <span class="pill" data-key="pill4">Datové modelování</span>
+        </div>
+      </div>
+      <div class="hero-image-wrapper">
+        <img src="profile_photo.jpg" alt="Michal Malich">
+      </div>
+    </section>
+
+    <section id="about" class="container">
+      <h2 data-key="about_title">O mě</h2>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M40 30 C 40 18, 50 10, 60 10 C 70 10, 80 18, 80 30 C 80 38, 75 45, 68 48 V 55 H 52 V 48 C 45 45, 40 38, 40 30 Z" fill="#f8f9fa" stroke="#2c3e50" stroke-width="3"/>
+              <rect x="56" y="55" width="8" height="10" fill="#2c3e50"/>
+              <path d="M50 70 H 70" stroke="#2c3e50" stroke-width="3"/>
+              <path d="M50 28 L 55 35 L 65 35" stroke="#d4af37" stroke-width="3" fill="none"/>
+            </svg>
+          </div>
+          <h3 data-key="about1_title">Proč já</h3>
+          <p data-key="about1_text">Jsem praktik — radši funkční řešení dnes než perfektní mockup za měsíc. Mluvím česky, reporty dělám srozumitelně a bez firemního bullshitu.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M20 20 L 50 20 M 20 30 L 50 30 M 20 40 L 50 40" stroke="#dee2e6" stroke-width="2"/>
+  <text x="22" y="24" font-family="monospace" font-size="10" fill="#6c757d">01101</text>
+  <text x="22" y="34" font-family="monospace" font-size="10" fill="#6c757d">10100</text>
+  <text x="22" y="44" font-family="monospace" font-size="10" fill="#6c757d">00110</text>
+  <path d="M40 70 L 60 50 L 80 60 L 100 40" stroke="#d4af37" stroke-width="4" fill="none"/>
+  <path d="M50 40 L 70 40" stroke="#2c3e50" stroke-width="3"/>
+  <path d="M60 30 L 60 50" stroke="#2c3e50" stroke-width="3"/>
+</svg>
+          </div>
+          <h3 data-key="about2_title">Technologie</h3>
+          <p data-key="about2_text">Power BI, Power Query (M), DAX, Excel/CSV, Google Analytics 4, e‑commerce platformy, SQL základy.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M60 10 L 90 25 V 45 C 90 65, 60 75, 60 75 C 60 75, 30 65, 30 45 V 25 Z" fill="#f8f9fa" stroke="#2c3e50" stroke-width="3"/>
+              <circle cx="60" cy="45" r="8" fill="none" stroke="#d4af37" stroke-width="3"/>
+              <path d="M60 45 V 50" stroke="#d4af37" stroke-width="3"/>
+            </svg>
+          </div>
+          <h3 data-key="about4_title">Bezpečnost a GDPR</h3>
+          <p data-key="about4_text">Důvěra je klíčová. Podpis NDA je samozřejmostí a veškeré postupy jsou v souladu s GDPR. Kdykoliv je to možné, pracuji s plně anonymizovanými daty.</p>
+        </div>
+    </section>
+
+    <section id="services" class="container">
+      <h2 data-key="services_title">Služby</h2>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="100" height="60" rx="8" fill="#f8f9fa" stroke="#dee2e6"/><path d="M10 25 H 110" stroke="#dee2e6"/><circle cx="20" cy="17.5" r="3" fill="#dee2e6"/><circle cx="30" cy="17.5" r="3" fill="#dee2e6"/><rect x="25" y="60" width="10" height="-20" rx="2" fill="#2c3e50"/><rect x="45" y="60" width="10" height="-35" rx="2" fill="#d4af37"/><rect x="65" y="60" width="10" height="-25" rx="2" fill="#2c3e50"/><rect x="85" y="60" width="10" height="-30" rx="2" fill="#2c3e50"/><path d="M85 52 L 85 68 L 91 65 L 94 72 L 100 70 L 97 63 L 103 61 Z" fill="#2c3e50" stroke="#fff" stroke-width="1.5"/></svg>
+          </div>
+          <h3 data-key="service1_title">Interaktivní reporting v PowerBI</h3>
+          <p data-key="service1_text">Tvorba přehledných a plně interaktivních reportů a dashboardů. Od napojení na datové zdroje až po finální vizualizaci, která vám poskytne okamžitý přehled o výkonnosti vaší firmy.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="25" cy="20" r="4" fill="#dee2e6"/><circle cx="38" cy="15" r="4" fill="#dee2e6"/><circle cx="51" cy="23" r="4" fill="#dee2e6"/><circle cx="28" cy="38" r="4" fill="#dee2e6"/><circle cx="42" cy="30" r="4" fill="#dee2e6"/><path d="M15 65 L 55 25 L 95 65 L 55 105 Z" fill="#d4af37" opacity="0.2"/><path d="M15 65 L 55 25 L 95 65 L 55 105 Z" fill="none" stroke="#d4af37" stroke-width="3"/><circle cx="75" cy="25" r="4" fill="#2c3e50"/><circle cx="88" cy="25" r="4" fill="#2c3e50"/><circle cx="75" cy="40" r="4" fill="#2c3e50"/><circle cx="88" cy="40" r="4" fill="#2c3e50"/></svg>
+          </div>
+          <h3 data-key="service2_title">Zpracování a čištění dat</h3>
+          <p data-key="service2_text">Kvalitní analýza stojí na kvalitních datech. Postarám se o transformaci, vyčištění a přípravu vašich datových sad tak, aby byly připraveny pro přesný a spolehlivý reporting.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="30" r="18" stroke="#2c3e50" stroke-width="4"/><path d="M54 44 L 68 58" stroke="#2c3e50" stroke-width="4" stroke-linecap="round"/><polyline points="25,70 45,55 65,60 85,40" stroke="#d4af37" stroke-width="4" fill="none"/><path d="M95 20 L 95 40 L 75 40" stroke="#2c3e50" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+          </div>
+          <h3 data-key="service3_title">Analýza a prezentace výsledků</h3>
+          <p data-key="service3_text">Hledání klíčových trendů, identifikace nejvýkonnějších produktů nebo odhalování slabých míst. Výsledky přehledně odprezentuji a pomohu vám s jejich interpretací pro strategické rozhodování.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="container">
+      <h2 data-key="portfolio_title">Ukázky řešení</h2>
+      <div class="portfolio">
+        <div class="card case-study" data-modal-target="#modal-ecommerce">
+          <div class="card-icon-main">
+            <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+  <line x1="20" y1="65" x2="100" y2="65" stroke="#dee2e6" stroke-width="2"/>
+  
+  <rect x="35" y="50" width="12" height="15" fill="#2c3e50"/>
+  <rect x="55" y="40" width="12" height="25" fill="#2c3e50"/>
+  <rect x="75" y="30" width="12" height="35" fill="#2c3e50"/>
+  
+  <path d="M35 50 L61 40 L81 30" stroke="#d4af37" stroke-width="2.5" fill="none"/>
+</svg>
+          </div>
+          <h3 data-key="portfolio1_title">Analýza prodejních dat pro E-commerce</h3>
+          <p class="muted" data-key="portfolio1_text_short"><b>Typický problém:</b> Investice do marketingu bez jasného přehledu o tom, které kanály a produkty skutečně vydělávají.</p>
+          <div class="card-action-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></div>
+        </div>
+        <div class="card case-study" data-modal-target="#modal-vyroba">
+          <div class="card-icon-main">
+            <svg viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="45" cy="40" r="25" stroke="#2c3e50" stroke-width="4" stroke-dasharray="8 4"/><circle cx="45" cy="40" r="12" fill="#2c3e50"/><polyline points="70,60 80,50 90,55 100,40 110,45" stroke="#d4af37" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+          </div>
+          <h3 data-key="portfolio2_title">Optimalizace výroby</h3>
+          <p class="muted" data-key="portfolio2_text_short"><b>Typický problém:</b> Neplánované prostoje a neefektivita ve výrobě, jejichž příčiny je těžké odhalit bez správných dat.</p>
+          <div class="card-action-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></div>
+        </div>
+        <div class="card case-study" data-modal-target="#modal-marketing">
+          <div class="card-icon-main">
+            <svg viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="40" r="30" fill="#dee2e6"/><path d="M50 40 L 50 10 A 30 30 0 0 1 80 40 Z" fill="#d4af37"/><path d="M50 40 L 80 40 A 30 30 0 0 1 20 40 Z" fill="#2c3e50"/><circle cx="50" cy="40" r="12" fill="#ffffff"/><path d="M90 25 L 105 25 L 105 10" stroke="#2c3e50" stroke-width="3" stroke-linecap="round"/><path d="M90 10 L 105 25" stroke="#2c3e50" stroke-width="3" stroke-linecap="round"/></svg>
+          </div>
+          <h3 data-key="portfolio3_title">Automatizace reportingu</h3>
+          <p class="muted" data-key="portfolio3_text_short"><b>Typický problém:</b> Manuální a časově náročné vytváření pravidelných reportů pro management nebo klienty.</p>
+          <div class="card-action-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="container">
+  <h2 data-key="pricing_title">Možnosti spolupráce</h2>
+  <div class="grid-3">
+
+    <div class="card pricing-card" data-modal-target="#modal-packet1">
+      <div class="card-icon-main">
+        <svg viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="15" y="10" width="90" height="60" rx="4" fill="#f8f9fa" stroke="#2c3e50" stroke-width="2"/><path d="M15 25 H 105" stroke="#dee2e6"/><path d="M30 60 L 50 40 L 70 50 L 90 30" stroke="#d4af37" stroke-width="3" fill="none"/><circle cx="45" cy="30" r="10" stroke="#2c3e50" stroke-width="2.5"/><path d="M52 37 L 58 43" stroke="#2c3e50" stroke-width="2.5" stroke-linecap="round"/></svg>
+      </div>
+      <h3 data-key="packet1_title">Jednorázový PDF Report</h3>
+      <p class="muted" data-key="packet1_desc">Rychlý a hloubkový vhled do vašich dat. Ideální první krok pro strategické rozhodování.</p>
+      
+      <div class="card-action-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></div>
+    </div>
+
+    <div class="card pricing-card" data-modal-target="#modal-packet2">
+      <div class="card-icon-main">
+        <svg viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M40 15 L 20 25 L 20 55 L 40 65 L 80 65 L 100 55 L 100 25 L 80 15 Z" fill="#f8f9fa" stroke="#2c3e50" stroke-width="2"/><rect x="45" y="45" width="10" height="15" fill="#2c3e50" rx="2"/><rect x="60" y="30" width="10" height="30" fill="#d4af37" rx="2"/><rect x="75" y="38" width="10" height="22" fill="#2c3e50" rx="2"/><circle cx="35" cy="28" r="4" fill="#2c3e50"/><circle cx="48" cy="28" r="4" fill="#dee2e6"/><circle cx="61" cy="28" r="4" fill="#dee2e6"/></svg>
+      </div>
+      <h3 data-key="packet2_title">Řešení na míru</h3>
+      <p class="muted" data-key="packet2_desc">Komplexní řešení, integrace více systémů a plně interaktivní online dashboardy.</p>
+      
+      <div class="card-action-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></div>
+    </div>
+
+    <div class="card pricing-card" data-modal-target="#modal-packet3">
+      <div class="card-icon-main">
+        <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="30" cy="25" r="8" fill="#2c3e50"/>
+  <path d="M30 33 V55" stroke="#dee2e6" stroke-width="2"/>
+
+  <circle cx="90" cy="25" r="8" fill="#2c3e50"/>
+  <path d="M90 33 V55" stroke="#dee2e6" stroke-width="2"/>
+
+  <path d="M38 45 C 55 58, 65 58, 82 45" stroke="#d4af37" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M82 35 C 65 22, 55 22, 38 35" stroke="#d4af37" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="4" markerHeight="4" refX="3" refY="2" orient="auto">
+      <polygon points="0 0, 4 2, 0 4" fill="#d4af37"/>
+    </marker>
+  </defs>
+</svg>
+      </div>
+      <h3 data-key="packet3_title">Konzultace a mentoring</h3>
+      <p class="muted" data-key="packet3_desc">Rychlá a efektivní pomoc se specifickým problémem v Power BI, DAXu nebo Power Query.</p>
+      
+      <div class="card-action-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></div>
+    </div>
+    
+  </div>
+</section>
+
+    <section id="contact" class="container">
+      <h2 data-key="contact_title">Kontakt</h2>
+      <div class="contact-options"><p data-key="contact_intro">Preferujete přímý kontakt, nebo máte rychlý dotaz? Napište mi, zavolejte, nebo vyplňte formulář níže.</p><div class="contact-details"><span><strong>E-mail:</strong> <a href="mailto:malich@mmdata.cz">malich@mmdata.cz</a></span><span><strong>Telefon:</strong> <a href="tel:+420774171503">+420 774 171 503</a></span></div></div>
+      <form id="contact-form" action="https://formspree.io/f/xanbzokg" method="POST">
+        <input name="name" data-key="form_name" placeholder="Vaše Jméno" required /><input name="email" type="email" data-key="form_email" placeholder="Váš E‑mail" required /><textarea name="message" data-key="form_msg" placeholder="S čím Vám mohu pomoci?"></textarea><button type="submit" data-key="form_button">Odeslat</button>
+      </form>
+      <p class="muted" style="color:var(--muted);margin-top:8px"></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" data-key="footer_text">© <span id="y"></span> Michal Malich • Data & Vizualizace</div>
+  </footer>
+
+  <div id="cookie-consent-banner">
+    <div class="container">
+      <p data-key="cookie_text">Tento web používá soubory cookies k zajištění co nejlepšího zážitku. Můžete přijmout všechny, nebo povolit pouze ty technicky nezbytné.</p>
+      <div class="cookie-buttons">
+        <button id="cookie-reject-button" class="cta secondary" data-key="cookie_reject">Pouze nezbytné</button>
+        <button id="cookie-accept-button" class="cta" data-key="cookie_accept">Přijmout vše</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-overlay"></div>
+
+  <div class="modal" id="modal-ecommerce">
+    <button class="modal-close" aria-label="Zavřít">&times;</button>
+    <h3 data-key="modal1_title">Ukázka řešení: Analýza prodejních dat pro E-commerce</h3>
+    <div class="modal-body" data-key="modal1_body">
+      <p><strong>Typický problém:</strong> Středně velký e-shop investuje značné prostředky do online marketingu, ale postrádá jasný přehled o návratnosti jednotlivých kampaní. Rozhodnutí o alokaci rozpočtu jsou činěna spíše intuitivně než na základě tvrdých dat.</p>
+      <p><strong>Moje řešení:</strong> Navrhuji napojení na data z Google Analytics 4 a e-shopové platformy. V Power Query bych data sjednotil a vyčistil. Následně bych v Power BI vytvořil komplexní, ale srozumitelný dashboard, který by obsahoval:</p>
+      <ul>
+        <li>Klíčové metriky (Tržby, PNO, Marže) s možností filtrování dle časového období a kampaně.</li>
+        <li>Analýzu nejprodávanějších produktů a kategorií.</li>
+        <li>Vizualizaci nákupního chování zákazníků.</li>
+      </ul>
+      <p><strong>Přínosy pro vás:</strong> Získáte okamžitý přehled o výkonnosti a můžete realokovat marketingový rozpočet tam, kde přináší největší zisk. Návratnost investice do reportingu se často projeví již v prvním měsíci.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-vyroba">
+    <button class="modal-close" aria-label="Zavřít">&times;</button>
+    <h3 data-key="modal2_title">Ukázka řešení: Optimalizace výroby</h3>
+    <div class="modal-body" data-key="modal2_body">
+      <p><strong>Typický problém:</strong> Výrobní firma čelí nečekaným prostojům a kolísavé kvalitě výstupu. Data z výroby existují, ale jsou "utopená" v nepřehledných excelovských tabulkách nebo v proprietárním systému, který neumožňuje snadnou analýzu.</p>
+      <p><strong>Moje řešení:</strong> Automatizované stahování dat přímo z SQL databáze výrobního systému. Vytvoření modelu, který sleduje OEE (Celkovou efektivitu zařízení) v reálném čase.</p>
+      <ul>
+        <li>Detailní rozpad prostojů podle příčin (porucha, čekání na materiál, seřízení).</li>
+        <li>Trendová analýza zmetkovitosti.</li>
+        <li>Heatmapy vytížení jednotlivých strojů v průběhu směny.</li>
+      </ul>
+      <p><strong>Přínosy pro vás:</strong> Odhalení úzkých hrdel ve výrobním procesu. Snížení prostojů díky lepšímu plánování údržby a identifikaci opakujících se problémů. Zvýšení celkové produktivity.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-marketing">
+    <button class="modal-close" aria-label="Zavřít">&times;</button>
+    <h3 data-key="modal3_title">Ukázka řešení: Automatizace reportingu</h3>
+    <div class="modal-body" data-key="modal3_body">
+      <p><strong>Typický problém:</strong> Finanční oddělení tráví každý měsíc několik dní manuálním kopírováním dat z různých exportů do finálního Excel reportu pro vedení. Proces je náchylný k chybám a report je k dispozici až s velkým zpožděním.</p>
+      <p><strong>Moje řešení:</strong> Nahrazení manuální práce automatizovanými toky v Power Query. Nastavení pravidelného načítání dat z účetního softwaru a CRM.</p>
+      <ul>
+        <li>Automatická aktualizace reportu jedním kliknutím nebo dle plánovače.</li>
+        <li>Eliminace lidských chyb při kopírování dat.</li>
+        <li>Vedení má přístup k aktuálním číslům kdykoliv online, ne jen jednou měsíčně v PDF.</li>
+      </ul>
+      <p><strong>Přínosy pro vás:</strong> Úspora desítek hodin práce kvalifikovaných zaměstnanců měsíčně. Rychlejší a přesnější podklady pro strategická rozhodnutí vedení firmy.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-packet1">
+    <button class="modal-close" aria-label="Zavřít">&times;</button>
+    <h3 data-key="modal_p1_title">Jednorázový PDF Report</h3>
+    <div class="modal-body" data-key="modal_p1_body">
+      <p>Ideální volba, pokud potřebujete rychle analyzovat konkrétní set dat a nepotřebujete (zatím) pravidelnou automatizaci.</p>
+      <p><strong>Co získáte:</strong></p>
+      <ul>
+        <li>Import a vyčištění vámi dodaných dat (Excel, CSV).</li>
+        <li>Vytvoření statického, ale vizuálně přehledného reportu v PDF.</li>
+        <li>Základní interpretaci nalezených trendů a odchylek.</li>
+      </ul>
+      <p><em>Vhodné pro jednorázové audity, roční shrnutí nebo ověření hypotéz před větší investicí.</em></p>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-packet2">
+    <button class="modal-close" aria-label="Zavřít">&times;</button>
+    <h3 data-key="modal_p2_title">Řešení na míru</h3>
+    <div class="modal-body" data-key="modal_p2_body">
+      <p>Kompletní implementace Business Intelligence řešení přizpůsobená vašim specifickým potřebám.</p>
+      <p><strong>Co získáte:</strong></p>
+      <ul>
+        <li>Analýzu vašich požadavků a dostupných datových zdrojů.</li>
+        <li>Architekturu datového modelu a automatizované datové toky.</li>
+        <li>Interaktivní Power BI dashboardy dostupné online (Power BI Service).</li>
+        <li>Školení uživatelů, jak s reporty pracovat.</li>
+        <li>Možnost nastavení Row-Level Security (kdo vidí jaká data).</li>
+      </ul>
+      <p><em>Ideální pro firmy, které chtějí řídit svůj byznys na základě dat každý den.</em></p>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-packet3">
+    <button class="modal-close" aria-label="Zavřít">&times;</button>
+    <h3 data-key="modal_p3_title">Konzultace a mentoring</h3>
+    <div class="modal-body" data-key="modal_p3_body">
+      <p>Zasekli jste se na složitém DAX vzorci? Nevíte, jak efektivně namodelovat relace? Nebo potřebujete oponenturu vašeho řešení?</p>
+      <p><strong>Co získáte:</strong></p>
+      <ul>
+        <li>Společné řešení problému přes sdílenou obrazovku (Teams/Google Meet).</li>
+        <li>Vysvětlení principů ("proč to nefunguje" a "jak to udělat správně").</li>
+        <li>Optimalizaci výkonu vašich reportů.</li>
+      </ul>
+      <p><em>Platíte pouze za čas, který reálně strávíme řešením vašeho problému.</em></p>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      // Dynamic Year
+      const ySpan = document.getElementById('y');
+      if (ySpan) ySpan.textContent = new Date().getFullYear();
+
+      // Translations
+      const translations = {
+        cs: {
+          nav_about: "O mě",
+          nav_services: "Služby",
+          nav_portfolio: "Ukázky řešení",
+          nav_pricing: "Spolupráce",
+          nav_cta: "Napište mi",
+          hero_title: "Data, co vydělávají. Přehledné dashboardy v Power BI.",
+          hero_p1: "Jmenuji se Michal Malich a dělám přehledné reporty, které ušetří čas a pomohou Vám dělat rozhodnutí bez mlžení.",
+          hero_p2: "Čistím data v Power Query a stavím modely v DAXu.",
+          pill1: "Power BI", pill2: "Power Query (M)", pill3: "DAX", pill4: "Datové modelování",
+          about_title: "O mě",
+          about1_title: "Proč já",
+          about1_text: "Jsem praktik — radši funkční řešení dnes než perfektní mockup za měsíc. Mluvím česky, reporty dělám srozumitelně a bez firemního bullshitu.",
+          about2_title: "Technologie",
+          about2_text: "Power BI, Power Query (M), DAX, Excel/CSV, Google Analytics 4, e‑commerce platformy, SQL základy.",
+          about4_title: "Bezpečnost a GDPR",
+          about4_text: "Důvěra je klíčová. Podpis NDA je samozřejmostí a veškeré postupy jsou v souladu s GDPR. Kdykoliv je to možné, pracuji s plně anonymizovanými daty.",
+          services_title: "Služby",
+          service1_title: "Interaktivní reporting v PowerBI",
+          service1_text: "Tvorba přehledných a plně interaktivních reportů a dashboardů. Od napojení na datové zdroje až po finální vizualizaci, která vám poskytne okamžitý přehled o výkonnosti vaší firmy.",
+          service2_title: "Zpracování a čištění dat",
+          service2_text: "Kvalitní analýza stojí na kvalitních datech. Postarám se o transformaci, vyčištění a přípravu vašich datových sad tak, aby byly připraveny pro přesný a spolehlivý reporting.",
+          service3_title: "Analýza a prezentace výsledků",
+          service3_text: "Hledání klíčových trendů, identifikace nejvýkonnějších produktů nebo odhalování slabých míst. Výsledky přehledně odprezentuji a pomohu vám s jejich interpretací pro strategické rozhodování.",
+          portfolio_title: "Ukázky řešení",
+          portfolio1_title: "Analýza prodejních dat pro E-commerce",
+          portfolio1_text_short: "<b>Typický problém:</b> Investice do marketingu bez jasného přehledu o tom, které kanály a produkty skutečně vydělávají.",
+          portfolio2_title: "Optimalizace výroby",
+          portfolio2_text_short: "<b>Typický problém:</b> Neplánované prostoje a neefektivita ve výrobě, jejichž příčiny je těžké odhalit bez správných dat.",
+          portfolio3_title: "Automatizace reportingu",
+          portfolio3_text_short: "<b>Typický problém:</b> Manuální a časově náročné vytváření pravidelných reportů pro management nebo klienty.",
+          pricing_title: "Možnosti spolupráce",
+          packet1_title: "Jednorázový PDF Report",
+          packet1_desc: "Rychlý a hloubkový vhled do vašich dat. Ideální první krok pro strategické rozhodování.",
+          packet2_title: "Řešení na míru",
+          packet2_desc: "Komplexní řešení, integrace více systémů a plně interaktivní online dashboardy.",
+          packet3_title: "Konzultace a mentoring",
+          packet3_desc: "Rychlá a efektivní pomoc se specifickým problémem v Power BI, DAXu nebo Power Query.",
+          contact_title: "Kontakt",
+          contact_intro: "Preferujete přímý kontakt, nebo máte rychlý dotaz? Napište mi, zavolejte, nebo vyplňte formulář níže.",
+          form_name: "Vaše Jméno",
+          form_email: "Váš E‑mail",
+          form_msg: "S čím Vám mohu pomoci?",
+          form_button: "Odeslat",
+          footer_text: "© " + new Date().getFullYear() + " Michal Malich • Data & Vizualizace",
+          cookie_text: "Tento web používá soubory cookies k zajištění co nejlepšího zážitku. Můžete přijmout všechny, nebo povolit pouze ty technicky nezbytné.",
+          cookie_reject: "Pouze nezbytné",
+          cookie_accept: "Přijmout vše",
+          // Modals CS
+          modal1_title: "Ukázka řešení: Analýza prodejních dat pro E-commerce",
+          modal1_body: "<p><strong>Typický problém:</strong> Středně velký e-shop investuje značné prostředky do online marketingu, ale postrádá jasný přehled o návratnosti jednotlivých kampaní. Rozhodnutí o alokaci rozpočtu jsou činěna spíše intuitivně než na základě tvrdých dat.</p><p><strong>Moje řešení:</strong> Navrhuji napojení na data z Google Analytics 4 a e-shopové platformy. V Power Query bych data sjednotil a vyčistil. Následně bych v Power BI vytvořil komplexní, ale srozumitelný dashboard, který by obsahoval:</p><ul><li>Klíčové metriky (Tržby, PNO, Marže) s možností filtrování dle časového období a kampaně.</li><li>Analýzu nejprodávanějších produktů a kategorií.</li><li>Vizualizaci nákupního chování zákazníků.</li></ul><p><strong>Přínosy pro vás:</strong> Získáte okamžitý přehled o výkonnosti a můžete realokovat marketingový rozpočet tam, kde přináší největší zisk. Návratnost investice do reportingu se často projeví již v prvním měsíci.</p>",
+          modal2_title: "Ukázka řešení: Optimalizace výroby",
+          modal2_body: "<p><strong>Typický problém:</strong> Výrobní firma čelí nečekaným prostojům a kolísavé kvalitě výstupu. Data z výroby existují, ale jsou \"utopená\" v nepřehledných excelovských tabulkách nebo v proprietárním systému, který neumožňuje snadnou analýzu.</p><p><strong>Moje řešení:</strong> Automatizované stahování dat přímo z SQL databáze výrobního systému. Vytvoření modelu, který sleduje OEE (Celkovou efektivitu zařízení) v reálném čase.</p><ul><li>Detailní rozpad prostojů podle příčin (porucha, čekání na materiál, seřízení).</li><li>Trendová analýza zmetkovitosti.</li><li>Heatmapy vytížení jednotlivých strojů v průběhu směny.</li></ul><p><strong>Přínosy pro vás:</strong> Odhalení úzkých hrdel ve výrobním procesu. Snížení prostojů díky lepšímu plánování údržby a identifikaci opakujících se problémů. Zvýšení celkové produktivity.</p>",
+          modal3_title: "Ukázka řešení: Automatizace reportingu",
+          modal3_body: "<p><strong>Typický problém:</strong> Finanční oddělení tráví každý měsíc několik dní manuálním kopírováním dat z různých exportů do finálního Excel reportu pro vedení. Proces je náchylný k chybám a report je k dispozici až s velkým zpožděním.</p><p><strong>Moje řešení:</strong> Nahrazení manuální práce automatizovanými toky v Power Query. Nastavení pravidelného načítání dat z účetního softwaru a CRM.</p><ul><li>Automatická aktualizace reportu jedním kliknutím nebo dle plánovače.</li><li>Eliminace lidských chyb při kopírování dat.</li><li>Vedení má přístup k aktuálním číslům kdykoliv online, ne jen jednou měsíčně v PDF.</li></ul><p><strong>Přínosy pro vás:</strong> Úspora desítek hodin práce kvalifikovaných zaměstnanců měsíčně. Rychlejší a přesnější podklady pro strategická rozhodnutí vedení firmy.</p>",
+          modal_p1_title: "Jednorázový PDF Report",
+          modal_p1_body: "<p>Ideální volba, pokud potřebujete rychle analyzovat konkrétní set dat a nepotřebujete (zatím) pravidelnou automatizaci.</p><p><strong>Co získáte:</strong></p><ul><li>Import a vyčištění vámi dodaných dat (Excel, CSV).</li><li>Vytvoření statického, ale vizuálně přehledného reportu v PDF.</li><li>Základní interpretaci nalezených trendů a odchylek.</li></ul><p><em>Vhodné pro jednorázové audity, roční shrnutí nebo ověření hypotéz před větší investicí.</em></p>",
+          modal_p2_title: "Řešení na míru",
+          modal_p2_body: "<p>Kompletní implementace Business Intelligence řešení přizpůsobená vašim specifickým potřebám.</p><p><strong>Co získáte:</strong></p><ul><li>Analýzu vašich požadavků a dostupných datových zdrojů.</li><li>Architekturu datového modelu a automatizované datové toky.</li><li>Interaktivní Power BI dashboardy dostupné online (Power BI Service).</li><li>Školení uživatelů, jak s reporty pracovat.</li><li>Možnost nastavení Row-Level Security (kdo vidí jaká data).</li></ul><p><em>Ideální pro firmy, které chtějí řídit svůj byznys na základě dat každý den.</em></p>",
+          modal_p3_title: "Konzultace a mentoring",
+          modal_p3_body: "<p>Zasekli jste se na složitém DAX vzorci? Nevíte, jak efektivně namodelovat relace? Nebo potřebujete oponenturu vašeho řešení?</p><p><strong>Co získáte:</strong></p><ul><li>Společné řešení problému přes sdílenou obrazovku (Teams/Google Meet).</li><li>Vysvětlení principů (\"proč to nefunguje\" a \"jak to udělat správně\").</li><li>Optimalizaci výkonu vašich reportů.</li></ul><p><em>Platíte pouze za čas, který reálně strávíme řešením vašeho problému.</em></p>"
+        },
+        en: {
+          nav_about: "About",
+          nav_services: "Services",
+          nav_portfolio: "Portfolio",
+          nav_pricing: "Cooperation",
+          nav_cta: "Contact Me",
+          hero_title: "Data that earns. Clear dashboards in Power BI.",
+          hero_p1: "I'm Michal Malich, creating clear reports that save time and help you make decisions without the fog.",
+          hero_p2: "I clean data in Power Query and build models in DAX.",
+          pill1: "Power BI", pill2: "Power Query (M)", pill3: "DAX", pill4: "Data Modeling",
+          about_title: "About Me",
+          about1_title: "Why Me",
+          about1_text: "I'm a practitioner — I prefer a functional solution today over a perfect mockup next month. I speak plain language, my reports are understandable and without corporate bullshit.",
+          about2_title: "Tech Stack",
+          about2_text: "Power BI, Power Query (M), DAX, Excel/CSV, Google Analytics 4, e‑commerce platforms, SQL basics.",
+          about4_title: "Security & GDPR",
+          about4_text: "Trust is key. Signing an NDA is a given, and all procedures comply with GDPR. Whenever possible, I work with fully anonymized data.",
+          services_title: "Services",
+          service1_title: "Interactive Power BI Reporting",
+          service1_text: "Creation of clear and fully interactive reports and dashboards. From connecting data sources to the final visualization that gives you an immediate overview of your company's performance.",
+          service2_title: "Data Processing & Cleaning",
+          service2_text: "Quality analysis relies on quality data. I'll handle the transformation, cleaning, and preparation of your datasets so they are ready for accurate and reliable reporting.",
+          service3_title: "Analysis & Result Presentation",
+          service3_text: "Finding key trends, identifying top-performing products, or revealing weak spots. I will clearly present the results and help you interpret them for strategic decision-making.",
+          portfolio_title: "Case Studies",
+          portfolio1_title: "E-commerce Sales Data Analysis",
+          portfolio1_text_short: "<b>Typical problem:</b> Investing in marketing without a clear overview of which channels and products actually generate profit.",
+          portfolio2_title: "Production Optimization",
+          portfolio2_text_short: "<b>Typical problem:</b> Unplanned downtime and production inefficiency, causes of which are hard to detect without proper data.",
+          portfolio3_title: "Reporting Automation",
+          portfolio3_text_short: "<b>Typical problem:</b> Manual and time-consuming creation of regular reports for management or clients.",
+          pricing_title: "Cooperation Options",
+          packet1_title: "One-off PDF Report",
+          packet1_desc: "A quick and deep insight into your data. An ideal first step for strategic decision-making.",
+          packet2_title: "Tailored Solution",
+          packet2_desc: "Comprehensive solution, integration of multiple systems, and fully interactive online dashboards.",
+          packet3_title: "Consulting & Mentoring",
+          packet3_desc: "Quick and effective help with a specific problem in Power BI, DAX, or Power Query.",
+          contact_title: "Contact",
+          contact_intro: "Prefer direct contact or have a quick question? Email me, call me, or fill out the form below.",
+          form_name: "Your Name",
+          form_email: "Your Email",
+          form_msg: "How can I help you?",
+          form_button: "Send",
+          footer_text: "© " + new Date().getFullYear() + " Michal Malich • Data & Visualization",
+          cookie_text: "This website uses cookies to ensure the best experience. You can accept all or allow only technically necessary ones.",
+          cookie_reject: "Necessary only",
+          cookie_accept: "Accept all",
+          // Modals EN
+          modal1_title: "Case Study: E-commerce Sales Data Analysis",
+          modal1_body: "<p><strong>Typical problem:</strong> A mid-sized e-shop invests significant funds into online marketing but lacks a clear overview of the ROI of individual campaigns. Budget allocation decisions are made intuitively rather than based on hard data.</p><p><strong>My solution:</strong> Connecting to data from Google Analytics 4 and the e-commerce platform. In Power Query, I would unify and clean the data. Subsequently, I would create a comprehensive yet understandable dashboard in Power BI containing:</p><ul><li>Key metrics (Revenue, CPA, Margin) with filtering by time period and campaign.</li><li>Analysis of best-selling products and categories.</li><li>Visualization of customer purchasing behavior.</li></ul><p><strong>Benefits for you:</strong> You gain an immediate overview of performance and can reallocate the marketing budget where it brings the most profit. The return on investment in reporting often manifests within the first month.</p>",
+          modal2_title: "Case Study: Production Optimization",
+          modal2_body: "<p><strong>Typical problem:</strong> A manufacturing company faces unexpected downtime and fluctuating output quality. Production data exists but is \"buried\" in messy Excel spreadsheets or a proprietary system that doesn't allow easy analysis.</p><p><strong>My solution:</strong> Automated data retrieval directly from the production system's SQL database. Creating a model that tracks OEE (Overall Equipment Effectiveness) in real-time.</p><ul><li>Detailed breakdown of downtime by cause (breakdown, waiting for material, setup).</li><li>Trend analysis of defect rates.</li><li>Heatmaps of machine utilization during shifts.</li></ul><p><strong>Benefits for you:</strong> Revealing bottlenecks in the production process. Reducing downtime through better maintenance planning and identification of recurring issues. Increasing overall productivity.</p>",
+          modal3_title: "Case Study: Reporting Automation",
+          modal3_body: "<p><strong>Typical problem:</strong> The finance department spends several days each month manually copying data from various exports into a final Excel report for management. The process is error-prone, and the report is available with a significant delay.</p><p><strong>My solution:</strong> Replacing manual work with automated flows in Power Query. Setting up regular data loading from accounting software and CRM.</p><ul><li>Automatic report updates with a single click or on a schedule.</li><li>Elimination of human errors during data copying.</li><li>Management has access to current numbers anytime online, not just once a month in PDF.</li></ul><p><strong>Benefits for you:</strong> Saving tens of hours of qualified employees' work monthly. Faster and more accurate data for strategic decision-making by company management.</p>",
+          modal_p1_title: "One-off PDF Report",
+          modal_p1_body: "<p>The ideal choice if you need to quickly analyze a specific set of data and do not need (yet) regular automation.</p><p><strong>What you get:</strong></p><ul><li>Import and cleaning of your supplied data (Excel, CSV).</li><li>Creation of a static but visually clear report in PDF.</li><li>Basic interpretation of found trends and deviations.</li></ul><p><em>Suitable for one-off audits, annual summaries, or hypothesis verification before a larger investment.</em></p>",
+          modal_p2_title: "Tailored Solution",
+          modal_p2_body: "<p>Complete implementation of a Business Intelligence solution adapted to your specific needs.</p><p><strong>What you get:</strong></p><ul><li>Analysis of your requirements and available data sources.</li><li>Data model architecture and automated data flows.</li><li>Interactive Power BI dashboards available online (Power BI Service).</li><li>User training on how to work with reports.</li><li>Option to set up Row-Level Security (who sees what data).</li></ul><p><em>Ideal for companies that want to drive their business based on data every day.</em></p>",
+          modal_p3_title: "Consulting & Mentoring",
+          modal_p3_body: "<p>Stuck on a complex DAX formula? Don't know how to model relationships effectively? Or need a review of your solution?</p><p><strong>What you get:</strong></p><ul><li>Joint problem solving via screen sharing (Teams/Google Meet).</li><li>Explanation of principles (\"why it doesn't work\" and \"how to do it right\").</li><li>Performance optimization of your reports.</li></ul><p><em>You pay only for the time we actually spend solving your problem.</em></p>"
+        }
+      };
+
+      // Language Switching Logic
+      const langLinks = document.querySelectorAll('.lang-link');
+      langLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const lang = link.getAttribute('data-lang');
+          applyLanguage(lang);
+        });
+      });
+
+      function applyLanguage(lang) {
+        document.documentElement.lang = lang;
+        const texts = translations[lang];
+        if (!texts) return;
+        document.querySelectorAll('[data-key]').forEach(el => {
+          const key = el.getAttribute('data-key');
+          if (texts[key]) {
+            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+              el.placeholder = texts[key];
+            } else {
+              el.innerHTML = texts[key];
+            }
+          }
+        });
+        localStorage.setItem('preferredLang', lang);
+      }
+      
+      const savedLang = localStorage.getItem('preferredLang') || 'cs';
+      applyLanguage(savedLang);
+
+      // Mobile Menu
+      const hamb = document.getElementById('hamburger-menu');
+      const mobileNav = document.getElementById('mobile-nav');
+      if (hamb && mobileNav) {
+        hamb.addEventListener('click', () => {
+          const isHidden = mobileNav.hidden;
+          mobileNav.hidden = !isHidden;
+          hamb.setAttribute('aria-expanded', isHidden);
+        });
+        mobileNav.addEventListener('click', (e) => {
+           if(e.target.tagName === 'A') {
+             mobileNav.hidden = true;
+             hamb.setAttribute('aria-expanded', 'false');
+           }
+        });
+      }
+
+      // Smooth Scroll
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+
+      // Cookie Banner
+      (function() {
+        const banner = document.getElementById('cookie-consent-banner');
+        const acceptBtn = document.getElementById('cookie-accept-button');
+        const rejectBtn = document.getElementById('cookie-reject-button');
+        
+        if (!localStorage.getItem('cookieConsent')) {
+          setTimeout(() => banner.classList.add('show'), 1000);
+        }
+
+        function handleConsent(accepted) {
+          localStorage.setItem('cookieConsent', accepted ? 'all' : 'necessary');
+          banner.classList.remove('show');
+          // Zde by se spouštěly/blokovaly skripty (GA4, Pixel atd.)
+          if(accepted) { console.log('Cookies accepted'); }
+        }
+
+        acceptBtn.addEventListener('click', function(){ handleConsent(true); });
+        rejectBtn.addEventListener('click', function(){ handleConsent(false); });
+      })();
+
+      // Modal Logic
+      (function() {
+         const modalTriggers = document.querySelectorAll('[data-modal-target]');
+         const overlay = document.getElementById('modal-overlay');
+         if (!modalTriggers.length || !overlay) return;
+
+         function closeModal() {
+           const openModal = document.querySelector('.modal.show');
+           if (openModal) {
+             openModal.classList.remove('show');
+             overlay.classList.remove('show');
+             document.body.classList.remove('no-scroll');
+           }
+         }
+
+         modalTriggers.forEach(trigger => {
+           trigger.addEventListener('click', () => {
+             const modalId = trigger.getAttribute('data-modal-target');
+             const modal = document.querySelector(modalId);
+             if (modal) {
+               modal.classList.add('show');
+               overlay.classList.add('show');
+               document.body.classList.add('no-scroll');
+             }
+           });
+         });
+
+         document.querySelectorAll('.modal-close').forEach(btn => {
+           btn.addEventListener('click', closeModal);
+         });
+
+         overlay.addEventListener('click', closeModal);
+
+         document.addEventListener('keydown', (e) => {
+           if (e.key === "Escape" && overlay.classList.contains('show')) {
+             closeModal();
+           }
+         });
+       })();
+    })();
+  </script>
+</body>
+</html>

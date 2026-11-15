@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Nezávazný dotaz – MMdata</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+      color: #1f2d3d;
+    }
+    .container {
+      max-width: 640px;
+      margin: 60px auto;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+      background-color: #ffffff;
+      border: 1px solid #e0e0e0;
+    }
+    .logo {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    h1 {
+      font-size: 28px;
+      color: #1f2d3d;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #1f2d3d;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+      background-color: #f9f9f9;
+    }
+    button {
+      background-color: #003366;
+      color: #ffffff;
+      border: none;
+      padding: 14px 28px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      display: block;
+      margin: 0 auto;
+    }
+    button:hover {
+      background-color: #002244;
+    }
+    .footer {
+      text-align: center;
+      font-size: 14px;
+      color: #888;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+  <a href="https://www.mmdata.cz" style="text-decoration:none;" aria-label="Domů – MMdata">
+    <svg width="210" height="40" viewBox="0 0 210 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <title>MMData</title>
+      <rect x="4" y="21" width="8" height="14" rx="1" fill="#2c3e50"/>
+      <rect x="14" y="7" width="8" height="28" rx="1" fill="#d4af37"/>
+      <rect x="24" y="21" width="8" height="14" rx="1" fill="#2c3e50"/>
+      <rect x="34" y="14" width="8" height="21" rx="1" fill="#2c3e50"/>
+      <text x="50" y="32" font-family="Montserrat, sans-serif" font-size="28" font-weight="600" fill="#2c3e50">MM-DATA</text>
+    </svg>
+  </a>
+</div>
+
+
+    <h1>📬 Nezávazný dotaz</h1>
+    <p>
+      Zajímá vás, jak by mohl vypadat přehled právě pro váš e-shop nebo firmu?  
+      Vyplňte pár základních informací a já se vám ozvu s návrhem – nezávazně, lidsky, bez nátlaku.  
+      Nepotřebujete žádný složitý systém – stačí data, která už máte, a chuť mít v číslech jasno.
+    </p>
+    <form action="https://formspree.io/f/xpwynrrl" method="POST">
+      <label for="name">Jméno nebo název firmy</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="email">Telefon</label>
+      <input type="text" id="telefon" name="telefon" required>
+
+      <label for="business">Typ podnikání</label>
+      <select id="business" name="business">
+        <option value="eshop">E-shop</option>
+        <option value="realitní kancelář">Realitní kancelář</option>
+        <option value="jiné">Jiné</option>
+      </select>
+
+      <label for="message">Co vás zajímá / co chcete řešit, stačí pár slov, zbytek vymyslíme</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Zaslat nezávazný dotaz</button>
+    </form>
+    <div class="footer">
+      MMdata.cz &nbsp;|&nbsp; Michal Malich
+    </div>
+  </div>
+</body>
+</html>
